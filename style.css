@@ -314,3 +314,110 @@ html, body {
         box-shadow: none; /* Remove box shadow on small screens for simplicity */
     }
 }
+
+/* Property Slide */
+/* property section */
+.property-overview {
+    display: flex;
+    align-items: flex-start; /* Align text and images to the top */
+    gap: 40px; /* Spacing between the text and the images */
+    padding: 20px; /* Add some padding around the entire section */
+  }
+  
+  .property-text {
+    flex: 1; /* Allow text to take up available space */
+    max-width: 400px; /* Limit the width of the text section */
+    margin-left: 40px;
+}
+  
+  .property-text h2 {
+    margin-top: 0; /* Remove default top margin for the heading */
+    margin-bottom: 15px;
+    font-size: 2.5em; /* Adjust as needed */
+  }
+  
+  .property-text p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .property-text .read-more-button {
+    padding: 10px 20px;
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .property-text .read-more-button:hover {
+    background-color: #ddd;
+  }
+  
+  .property-images {
+    display: flex;
+    gap: 20px; /* Spacing between the property cards */
+    margin-left: 180px; /* Adjust this positive value to move images right */
+  }
+  
+  .property-card {
+    background-color: #f9f9f9; /* Light background for the card */
+    border-radius: 8px;
+    overflow: hidden; /* To contain the image within the rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 250px; /* Adjust as needed for your layout */
+  }
+  
+  .property-card img {
+    display: block;
+    width: 100%;
+    height: auto; /* Maintain image aspect ratio */
+    border-bottom: 1px solid #eee; /* Separator between image and button */
+  }
+  
+  .property-card .read-more-button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #007bff; /* Example button color */
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .property-card .read-more-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive adjustments (optional) */
+  @media (max-width: 768px) {
+    .property-overview {
+      flex-direction: column; /* Stack text and images on smaller screens */
+      align-items: center; /* Center items on smaller screens */
+    }
+  
+    .property-text {
+      max-width: 100%; /* Allow text to take full width */
+      text-align: center; /* Center text on smaller screens */
+      margin-bottom: 30px; /* Add more space below text */
+    }
+  
+    .property-images {
+      flex-direction: row; /* Keep images horizontal on smaller screens if space allows */
+      overflow-x: auto; /* Allow horizontal scrolling if images don't fit */
+      width: 100%; /* Take full width */
+      margin-left: 0; /* Reset margin on smaller screens */
+    }
+  
+    .property-card {
+      min-width: 200px; /* Ensure cards don't get too narrow */
+      width: auto; /* Adjust width based on content */
+    }
+  }
