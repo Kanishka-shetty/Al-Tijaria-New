@@ -70,4 +70,96 @@
     color: #01020b;
     cursor: pointer;
   }
+ 
+/* Who are we Section */
 
+/* Who are we section */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Full height */
+    width: 100%;  /* Full width */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.second-page {
+    width: 100%;
+    height: 100vh; /* Full height of the viewport */
+    position: relative;
+    overflow: hidden; /* Hide any overflow */
+}
+
+.second-page .container {
+    position: relative;  /* Contain elements relative to the container */
+    width: 100%;
+    height: 100%;
+}
+
+.second-page .container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;  /* Full viewport width */
+    height: 80%;  /* Full height */
+    object-fit: cover;  /* Maintain aspect ratio, crop if necessary */
+}
+
+.left-text, .right-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
+    padding: 20px;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 5px;
+    width: 40%;
+}
+
+.left-text {
+    left: 5%;
+    text-align: left;
+}
+
+.right-text {
+    right: 5%;
+    text-align: right;
+}
+
+.left-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.right-text p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    font-size: bolder;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .second-page .container {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center; /* Center align text on mobile */
+    }
+
+    .left-text {
+        width: 80%; /* Adjust width for smaller screens */
+        margin-bottom: 15px; /* Add some spacing between heading and paragraph */
+    }
+
+    .right-text {
+        width: 80%; /* Adjust width for smaller screens */
+    }
+
+    .left-text h2 {
+        font-size: 1.8em; /* Smaller font size for mobile */
+    }
+
+    .right-text p {
+        font-size: 1.1em; /* Smaller font size for mobile */
+    }
+}
