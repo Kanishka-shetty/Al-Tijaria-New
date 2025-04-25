@@ -6,45 +6,137 @@
   <title>Tijaria</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    header {
+      background-color: #1bdacd; /* Light grey background */
+      padding: 15px 0; /* Add some vertical padding */
+    }
+
+    header .container {
+      display: flex; /* Enable flexbox for horizontal alignment */
+      justify-content: space-between; /* Distribute space between logo and navigation */
+      align-items: center; /* Vertically align items in the center */
+      max-width: 1200px; /* Optional: Limit the maximum width of the container */
+      margin: 0 auto; /* Center the container horizontally */
+      padding: 0 20px; /* Add some horizontal padding inside the container */
+    }
+
+    header .logo {
+      /* Add your logo styling here if needed */
+      font-size: 1.5em; /* Example logo size */
+      font-weight: bold;
+    }
+
+    header nav ul {
+      list-style: none; /* Remove bullet points from the list */
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex; /* Align navigation items horizontally */
+    }
+
+    header nav ul li {
+      margin-left: 20px; /* Add spacing between navigation links */
+    }
+
+    header nav ul li:first-child {
+      margin-left: 0; /* Remove left margin for the first item */
+    }
+
+    header nav ul li a {
+      text-decoration: none; /* Remove underlines from links */
+      color: #01020b; /* Dark grey link color */
+    }
+
+    header .header-right {
+      display: flex; /* Align contacts and search icon horizontally */
+      align-items: center; /* Vertically align items */
+    }
+
+    header .header-right .contacts-box {
+      margin-right: 15px; /* Add spacing between contacts and search */
+    }
+
+    header .header-right .contacts-box a {
+      text-decoration: none;
+      color: #22cf4d;
+    }
+
+    header .header-right .search-icon img {
+      width: 20px; /* Example search icon size */
+      height: auto;
+      vertical-align: middle; /* Align icon with surrounding text */
+    }
+
+     /* Media query for smaller screens (max-width: 767px) */
+     @media (max-width: 767px) {
+      header .container {
+        flex-direction: column; /* Stack logo, nav, right vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px;
+      }
+
+      header nav {
+        width: 100%; /* Make navigation take full width */
+        margin-top: 10px; /* Add some space below the logo */
+      }
+
+      header nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+      }
+
+      header nav ul li {
+        margin: 10px 0; /* Add vertical spacing for links */
+        margin-left: 0; /* Remove left margin */
+      }
+
+      header .header-right {
+        width: 100%; /* Make header-right take full width */
+        justify-content: space-between; /* Space out contacts and search */
+        margin-top: 10px; /* Add some space below navigation */
+        margin-left: 40px;
+      }
+
+
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+        <div class="logo"></div>
+        <nav>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT AL TIJARIA</a></li>
+                <li><a href="#">OUR PRESENCE</a></li>
+                <li><a href="#">OUR PROPERTIES</a></li>
+                <li><a href="#">INVESTORS RELATIONS</a></li>
+                <li><a href="#">CORPORATE GOVERNANCE</a></li>
+                <li><a href="#">WE CARE</a></li>
+                <li><a href="#">CAREERS</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
 
-    <header>
-        <div class="container">
-            <div class="logo"></div>
-            <nav>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT AL TIJARIA</a></li>
-                    <li><a href="#">OUR PRESENCE</a></li>
-                    <li><a href="#">OUR PROPERTIES</a></li>
-                    <li><a href="#">INVESTORS RELATIONS</a></li>
-                    <li><a href="#">CORPORATE GOVERNANCE</a></li>
-                    <li><a href="#">WE CARE</a></li>
-                    <li><a href="#">CAREERS</a></li>
-                </ul>
-            </nav>
-            <div class="header-right">
-                <div class="contacts-box">
-                    <a href="#">CONTACTS</a>
-                </div>
-                <div class="search-icon">
-                    <img src="assets/search.png" alt="Search">
-                </div>
-            </div>
+            <div class="search-icon">
+                <!-- <img src="assets/search.png" alt="Search"> -->
+                <i class="fas fa-search"></i>
+              </div>
         </div>
-    </header>
+    </div>
+</header>
 
   <main>
     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators -->
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
+        </div>
 
-      <!-- Carousel items -->
       <div class="carousel-inner">
         <div class="carousel-item active">
           <img src="assets/slider2.jpg" class="d-block w-100" alt="image1" />
@@ -54,22 +146,21 @@
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/slider1.jpg" class="d-block w-100" alt="image2" />
+          <img src="assets/slider3.jpg" class="d-block w-100" alt="image2" />
           <div class="carousel-caption">
             <h5>Symphony Luxurious Hotel</h5>
             <p>Symphony Hotel offers an exclusive experience with world-class amenities, located in the city's prime area.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="assets/slider3.jpg" class="d-block w-100" alt="image3" />
+          <img src="assets/slider1.jpg" class="d-block w-100" alt="image2" />
           <div class="carousel-caption">
-            <h5>Tijaria Al Residential Complex</h5>
-            <p>The Tijaria Al Residential Complex is designed with contemporary living in mind, offering spacious apartments and top-notch facilities.</p>
+            <h5>Al Tijaria Hotel</h5>
+            <p>Al-Tijaria refers to both a skyscraper in Kuwait (Al Tijaria Tower) and a real estate development company (The Commercial Real Estate Company, Al-Tijaria)</p>
           </div>
         </div>
-      </div>
+        </div>
 
-      <!-- Controls -->
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -79,11 +170,18 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
-  </main>
 
-  <!-- Bootstrap JS Bundle -->
+
+
+    <!-- third slide -->
+     <p>Al-Tijaria refers to both a skyscraper in Kuwait (Al Tijaria Tower) and a real estate development company (The Commercial Real Estate Company, Al-Tijaria)</p>
+     <p>Al-Tijaria refers to both a skyscraper in Kuwait (Al Tijaria Tower) and a real estate development company (The Commercial Real Estate Company, Al-Tijaria)</p>
+     <p>Al-Tijaria refers to both a skyscraper in Kuwait (Al Tijaria Tower) and a real estate development company (The Commercial Real Estate Company, Al-Tijaria)</p>
+     <p>Al-Tijaria refers to both a skyscraper in Kuwait (Al Tijaria Tower) and a real estate development company (The Commercial Real Estate Company, Al-Tijaria)</p>
+
+    </main>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Your custom script (if needed) -->
   <script src="script.js"></script>
 </body>
 </html>
