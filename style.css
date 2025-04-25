@@ -71,14 +71,14 @@
     cursor: pointer;
   }
  
-/* Who are we Section */
+
 
 /* Who are we section */
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%; /* Full height */
-    width: 100%;  /* Full width */
+    height: 100%; 
+    width: 100%;  
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
@@ -142,24 +142,64 @@ html, body {
 /* Media query for mobile devices */
 @media (max-width: 768px) {
     .second-page .container {
-        flex-direction: column; /* Stack elements vertically */
-        text-align: center; /* Center align text on mobile */
+        flex-direction: column; 
+        text-align: center; 
     }
 
     .left-text {
-        width: 80%; /* Adjust width for smaller screens */
-        margin-bottom: 15px; /* Add some spacing between heading and paragraph */
+        width: 80%; 
+        margin-bottom: 15px; 
     }
 
     .right-text {
-        width: 80%; /* Adjust width for smaller screens */
+        width: 80%; 
     }
 
     .left-text h2 {
-        font-size: 1.8em; /* Smaller font size for mobile */
+        font-size: 1.8em; 
     }
 
     .right-text p {
-        font-size: 1.1em; /* Smaller font size for mobile */
+        font-size: 1.1em; 
+    }
+}
+
+/* Social Media icons */
+/* Container for social media icons */
+.social-links {
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+    margin-top: 20px;  
+}
+
+/* Style for the individual links */
+.social-links a {
+    margin: 0 20px;  
+    display: block;  
+    transition: transform 0.3s ease;  
+}
+
+/* Hover effect for icons */
+.social-links a:hover {
+    transform: scale(1.1);  
+}
+
+
+.social-links img {
+    width: 60px;  
+    height: 60px; 
+    object-fit: contain; 
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .social-links {
+        margin-top: 15px;  
+    }
+
+    .social-links img {
+        width: 50px;  
+        height: 50px;  
     }
 }
