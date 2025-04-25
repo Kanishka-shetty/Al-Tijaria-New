@@ -203,3 +203,114 @@ html, body {
         height: 50px;  
     }
 }
+
+/* Chairmans section */
+.chairman-message-section {
+    background-color: #f9f9f9; 
+    width: 100%;
+    padding: 50px 20px; 
+    box-sizing: border-box; 
+}
+
+.chairman-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+
+.chairman-text {
+    flex: 1; 
+    text-align: left;
+    margin-right: 40px;
+}
+
+.chairman-text h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.chairman-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    width: 400px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.read-more-button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #333;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.read-more-button:hover {
+    background-color: #333;
+    color: white;
+}
+
+.chairman-image {
+    width: 300px; 
+    flex-shrink: 0; 
+}
+
+.chairman-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: block;
+}
+@media screen and (max-width: 768px) {
+    .chairman-message-section {
+        padding: 30px 15px;
+    }
+
+    .chairman-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        padding: 0 15px;
+    }
+
+    .chairman-text {
+        margin-right: 0;
+        text-align: center;
+        width: 100%; /* Ensure text takes full width on small screens */
+    }
+
+    .chairman-text h2 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .chairman-text p {
+        font-size: 14px;
+        width: 100%; /* Allow the paragraph to take up full width */
+        margin-bottom: 15px;
+    }
+
+    .read-more-button {
+        font-size: 18px;
+        padding: 8px 18px;
+    }
+
+    .chairman-image {
+        width: 100%;
+        margin-top: 18px; /* Add some space between the text and image */
+    }
+
+    .chairman-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: none; /* Remove box shadow on small screens for simplicity */
+    }
+}
