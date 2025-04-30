@@ -3,130 +3,193 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tijaria</title>
+  <title>Al Tijaria</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     header {
-      background-color: #1bdacd; /* Light grey background */
-      padding: 15px 0; /* Add some vertical padding */
+      background-color: #1bdacd;
+      padding: 15px 0;
     }
 
     header .container {
-      display: flex; /* Enable flexbox for horizontal alignment */
-      justify-content: space-between; /* Distribute space between logo and navigation */
-      align-items: center; /* Vertically align items in the center */
-      max-width: 1200px; /* Optional: Limit the maximum width of the container */
-      margin: 0 auto; /* Center the container horizontally */
-      padding: 0 20px; /* Add some horizontal padding inside the container */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
     }
 
     header .logo {
-      /* Add your logo styling here if needed */
-      font-size: 1.5em; /* Example logo size */
+      font-size: 1.5em;
       font-weight: bold;
     }
 
     header nav ul {
-      list-style: none; /* Remove bullet points from the list */
+      list-style: none;
       padding: 0;
       margin: 0;
       font-size: 15px;
       font-weight: bold;
-      display: flex; /* Align navigation items horizontally */
+      display: flex;
     }
 
     header nav ul li {
-      margin-left: 20px; /* Add spacing between navigation links */
+      margin-left: 20px;
+      position: relative; /* This will position the dropdown relative to the parent li */
     }
 
     header nav ul li:first-child {
-      margin-left: 0; /* Remove left margin for the first item */
+      margin-left: 0;
     }
 
     header nav ul li a {
-      text-decoration: none; /* Remove underlines from links */
-      color: #01020b; /* Dark grey link color */
-    }
-
-    header .header-right {
-      display: flex; /* Align contacts and search icon horizontally */
-      align-items: center; /* Vertically align items */
-    }
-
-    header .header-right .contacts-box {
-      margin-right: 15px; /* Add spacing between contacts and search */
-    }
-
-    header .header-right .contacts-box a {
       text-decoration: none;
-      color: #22cf4d;
+      color: #01020b;
     }
 
-    header .header-right .search-icon img {
-      width: 20px; /* Example search icon size */
-      height: auto;
-      vertical-align: middle; /* Align icon with surrounding text */
+    /* Style for dropdown */
+    header nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(185, 153, 211);
+      padding: 0;
+      margin: 0;
+      border-radius: 5px;
+      min-width: 160px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
 
-     /* Media query for smaller screens (max-width: 767px) */
-     @media (max-width: 767px) {
+    /* Show the dropdown when the parent li is hovered */
+    header nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    /* Styling for dropdown items */
+    header nav ul li .dropdown li {
+      padding: 8px 15px;
+      margin: 0;
+    }
+
+    header nav ul li .dropdown li a {
+      color: #01020b;
+      text-decoration: none;
+      display: block;
+      transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    header nav ul li .dropdown li a:hover {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Optional: Add smooth transition to dropdown */
+    header nav ul li .dropdown {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+
+    header nav ul li:hover .dropdown {
+      opacity: 1;
+    }
+
+    
+    /* Additional styling for the search icon */
+
+    /* Media query for smaller screens */
+    @media (max-width: 767px) {
       header .container {
-        flex-direction: column; /* Stack logo, nav, right vertically */
-        align-items: flex-start; /* Align items to the left */
+        flex-direction: column;
+        align-items: flex-start;
         padding: 10px;
       }
 
       header nav {
-        width: 100%; /* Make navigation take full width */
-        margin-top: 10px; /* Add some space below the logo */
+        width: 100%;
+        margin-top: 10px;
       }
 
       header nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-direction: column;
       }
 
       header nav ul li {
-        margin: 10px 0; /* Add vertical spacing for links */
-        margin-left: 0; /* Remove left margin */
+        margin: 10px 0;
+        margin-left: 0;
       }
 
       header .header-right {
-        width: 100%; /* Make header-right take full width */
-        justify-content: space-between; /* Space out contacts and search */
-        margin-top: 10px; /* Add some space below navigation */
-        margin-left: 40px;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
       }
     }
   </style>
 </head>
 <body>
-<header>
+  <header>
     <div class="container">
-        <div class="logo"></div>
-        <nav>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT AL TIJARIA</a></li>
-                <li><a href="#">OUR PRESENCE</a></li>
-                <li><a href="#">OUR PROPERTIES</a></li>
-                <li><a href="#">INVESTORS RELATIONS</a></li>
-                <li><a href="#">CORPORATE GOVERNANCE</a></li>
-                <li><a href="#">WE CARE</a></li>
-                <li><a href="#">CAREERS</a></li>
+      <!-- <div class="logo">Logo</div> -->
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="#">ABOUT AL TIJARIA</a>
+            <ul class="dropdown">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="chairman.html">Chairman's Message</a></li>
+              <li><a href="events.html">Our Events</a></li>
+              <li><a href="awards.html">Awards</a></li>
             </ul>
-        </nav>
-        <div class="header-right">
+          </li>
+          <li>
+            <a href="#">OUR PRESENCE</a>
+            <ul class="dropdown">
+              <li><a href="#">Kuwait</a></li>
+              <li><a href="#">Bahrain</a></li>
+              <li><a href="#">International</a></li>
+            </ul>
+          </li>
 
-            <div class="search-icon">
-                <!-- <img src="assets/search.png" alt="Search"> -->
-                <i class="fas fa-search"></i>
-              </div>
+          <li>
+            <a href="#">INVESTORS RELATIONS</a>
+            <ul class="dropdown">
+              <li><a href="#">Why Al Tijaria?</a></li>
+              <li><a href="#">Our Investments</a></li>
+              <li><a href="#">Financial Statements</a></li>
+              <li><a href="#">Annual Report</a></li>
+              <li><a href="#">Shareholders Affairs</a></li>
+            </ul>
+          </li>
+        
+          <li>
+            <a href="#">CORPORATE GOVERNANCE</a>
+            <ul class="dropdown">
+              <li><a href="#">BOD Committees</a></li>
+              <li><a href="#">Shareholders Rights</a></li>
+              <li><a href="#">Stakeholders</a></li>
+              <li><a href="#">Code Of Conduct</a></li>
+            </ul>
+          </li>
+          <li><a href="#">OUR PROPERTIES</a></li>
+          <!-- <li><a href="#">INVESTORS RELATIONS</a></li> -->
+          <!-- <li><a href="#">CORPORATE GOVERNANCE</a></li> -->
+          <li><a href="#">WE CARE</a></li>
+          <li><a href="#">CAREERS</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
         </div>
+      </div>
     </div>
-</header>
-
+  </header>
     <main>
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
@@ -134,7 +197,7 @@
             <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
             <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-    
+          
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="assets/slider2.jpg" class="d-block w-100" alt="image1" />

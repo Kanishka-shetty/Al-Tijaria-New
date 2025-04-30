@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chairmans Message</title>
+    <link rel="stylesheet" href="chairman.css">
+</head>
+<body style="background-color: #333; color: white;"></body> 
+    <!-- Placeholder for Header -->
+    <div id="header"></div>
+
+    <!-- Page-specific content -->
+    <div class="chairman-message">
+        <img src="assets/chairman-message-banner.jpg" alt="Chairman" style="width:100%; height:auto;">
+    </div>
+
+    <div class="container my-3 text-center">
+        <a href="home.html" style="color: #a1c3e7; text-decoration: none; font-weight: bold;">Home</a> /
+        <span style="color: rgb(162, 46, 46);">Al Tijaria</span>
+      </div>
+    
+      <div class="chairman-section">
+        <div class="chairman-image">
+            <img src="assets/Chairman section.jpg" alt="Chairman's Image">
+        </div>
+        <div class="chairman-text">
+            <h3>Dear All,</h3>
+            <p>The commercial real estate company is one of the leading companies in Kuwait and the region in real estate development and management. We are where we are today because of the rich experience and knowledge accumulated since the establishment of the company in 1968 and restructuring in the year 2000.</p>
+            <p>The success of the Commercial Real Estate Company is a result of many achievements in the field of real estate development, both in Kuwait and the regional market. We are a driving force in the domestic and regional real estate market. The skill set that we possess along with our management team's rich experience has made it possible for us to participate and execute several mega projects in Kuwait and the region which have turned out to be hallmark projects.</p>
+            </div>
+    </div>
+
+
+
+    <div class="container my-4" style="max-width: 1300px; display: flex; justify-content: flex-start;">
+        <div style="background-color: #222; color: white; padding: 20px; border-radius: 10px; max-width: 600px; margin-right: 20px;">
+            <p style="margin: 0; font-size: 20px;">
+                Our success was established as a result of building a strong organizational structure for the company with the continued support from successive boards with expertise and high qualifications in the financial, real estate and investment sectors during their operating periods and achieved continuous and consecutive successes since 2000 through the development and implementation of a conservative and promising strategic plan for expansion, development and investment which has achieved strong financial results in accordance to the practical and innovative solutions that are flexible enough to meet the changing needs of its customers as well as meeting the challenges and exploring new horizons for the benefit of our shareholders, partners and the communities in which we operate.          
+            </p>
+        </div>
+        <div style="background-color: #222; color: white; padding: 20px; border-radius: 10px; max-width: 600px;">
+            <p style="margin: 0; font-size: 20px;">
+                We are committed to our shareholders and we strive to maintain consistent growth rate, enhanced profitability and effective cash management thus optimizing the returns over the invested capital in order to achieve quality and value. We follow low-risk policies and strategies that work on the acquisition of good assets and maintain balance and diversity in our real estate investment between recurring income assets and strategic assets which achieve higher growth and create a sustainable value for our shareholders and partners.            </p>
+        </div>
+    </div>
+    
+    
+    <div class="container my-4" style="max-width: 1300px; display: flex; justify-content: flex-start;">
+        <div style="background-color: #222; color: white; padding: 20px; border-radius: 10px; max-width: 600px; margin-right: 20px;">
+            <p style="margin: 0; font-size: 20px;">
+                Our Policies includes creating balance between the internal and external resources of the company which is reflected by strong financial indicators, both at the company financial statement level and the financial parties. One of our most important goals, is to support self-financing and reducing the debts relying on a strong asset base, financial and operational adequacy which increases the confidence of financiers, despite the local,regional and global economic conditions.            </p>
+        </div>
+        <div style="background-color: #222; color: white; padding: 20px; border-radius: 10px; max-width: 600px;">
+            <p style="margin: 0; font-size: 20px;">
+                Our credibility stems from our strong and deep belief in transparency and disclosure, accountability, justice, fairness and social responsibility. Thus Al Tijaria was the first company in Kuwait, which has implemented the corporate governance policies and were leaders in this field. The company adopted the Corporate Governance guide and developed its implementation mechanisms and procedures to ensure proper implementation is in place, determine the responsibilities and authorities and regulate the relationship between each of the shareholders, board members, executive management and stakeholders of the company. Committees emanating from the Board of Directors have been created to monitor the implementation of those policies and standards, such as the Corporate Governance Committee, Supervisory Committee, the Risk and Audit Committee, the Nomination and Remuneration Committee in addition to al Sharia committee (external party). All these committees report directly to the Board of Directors.        </div>
+    </div>
+
+
+
+    <div class="container my-4" style="max-width: 1300px; display: flex; justify-content: flex-start;">
+        <!-- Left Side: Text Section -->
+        <div style="background-color: #222; color: white; padding: 20px; border-radius: 10px; max-width: 600px; margin-right: 20px;">
+            <p style="margin: 0; font-size: 20px;">
+                At the Commercial Real Estate Company, we have developed concepts and principles that we always seek to achieve and are committed to them in the way we do things and proceed forward. These can be defined as the “5 T’s”.
+            </p>
+            <ul style="font-size: 20px; margin-top: 20px;">
+                <li>Team work: work as "one for all & all for one" together everyone achieves more.</li>
+                <li>Task: to know your tasks, you should know what, how, and why?</li>
+                <li>Trust: mutual trust within the company; will be reflected and conveyed smoothly to others.</li>
+                <li>Time management: time is our most precious asset, we should invest it wisely.</li>
+                <li>Transparency: Information is more valued when it's exchanged in an open way without secrets.</li>
+            </ul>
+            <p style="margin-top: 20px;">
+                The Teach the 5 T’s Book is now available for download, providing a comprehensive guide to the principles of success and knowledge-sharing.
+            </p>
+        </div>
+    
+        <!-- Right Side: Image Section -->
+        <div style="max-width: 600px;">
+            <img src="assets/5T's.jpg" alt="5 T's Image" style="width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+    
+    
+
+
+    <!-- Placeholder for Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Fetch and insert the header content from header.html
+        fetch("header.html")
+            .then(response => response.text())  // Convert response to text
+            .then(data => {
+                document.getElementById("header").innerHTML = data;  // Insert it into the header div
+            });
+
+        // Fetch and insert the footer content from footer.html
+        fetch("footer.html")
+            .then(response => response.text())  // Convert response to text
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;  // Insert it into the footer div
+            });
+    </script>
+
+</html>

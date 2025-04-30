@@ -1,0 +1,178 @@
+/* Footer styling */
+.main-footer {
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 20px;
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .footer-social .social-text {
+    margin-right: 20px;
+  }
+  
+  .footer-social .social-icons a {
+    display: inline-block;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 1.5em;
+    text-decoration: none;
+  }
+  
+  .footer-social .social-icons a:hover {
+    color: #007bff;
+  }
+  
+  .footer-links-grid {
+    padding: 30px 0;
+  }
+  
+  .footer-links-grid .container {
+    text-align: center;
+  }
+  
+  .footer-links-grid h6 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 1em;
+  }
+  
+  .footer-links-grid p {
+    color: #ccc;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+  }
+  
+  .footer-links-grid a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .footer-links-grid a:hover {
+    color: #007bff;
+  }
+  
+  .footer-links-grid .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer-links-grid .row > div {
+    flex-basis: calc(50% - 20px);
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  @media (min-width: 768px) {
+    .footer-social {
+      justify-content: space-between;
+    }
+  
+    .footer-links-grid .container {
+      text-align: left;
+    }
+  
+    .footer-links-grid .row > div {
+      flex-basis: auto;
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  
+    .footer-links-grid .company-info {
+      flex-basis: 30%;
+    }
+  
+    .footer-links-grid .home-links {
+      flex-basis: 15%;
+    }
+  
+    .footer-links-grid .help-links {
+      flex-basis: 20%;
+    }
+  
+    .footer-links-grid .contact-info {
+      flex-basis: 30%;
+    }
+  }
+  
+  .footer-links-grid .contact-info p {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-links-grid .contact-info i {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 767px) {
+    .footer-social {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .footer-social .social-text {
+      margin-bottom: 10px;
+    }
+  
+    .footer-social .social-icons {
+      justify-content: center;
+      display: flex;
+      margin-right: 50px;
+      /* justify-content: center; */
+      gap: 15px;
+    }
+  
+    .footer-links-grid .row {
+      flex-direction: column;
+    }
+  
+    .footer-links-grid .row > div {
+      flex-basis: auto;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+  
+    @media (min-width: 480px) and (max-width: 767px) {
+      .footer-links-grid .row {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+  
+      .footer-links-grid .row > div {
+        flex-basis: calc(50% - 20px);
+      }
+  
+      .footer-links-grid .company-info,
+      .footer-links-grid .contact-info {
+        flex-basis: 100%;
+      }
+    }
+  }
+  
+  .footer-copyright {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #ccc;
+    font-size: 0.8em;
+    text-align: center;
+    padding: 15px;
+  }
+  
+  .footer-copyright a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .footer-copyright a:hover {
+    color: #007bff;
+  }

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Space</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    header {
+      background-color: #1bdacd;
+      padding: 15px 0;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 15px;
+      font-weight: bold;
+      display: flex;
+    }
+
+    header nav ul li {
+      margin-left: 20px;
+      position: relative; /* This will position the dropdown relative to the parent li */
+    }
+
+    header nav ul li:first-child {
+      margin-left: 0;
+    }
+
+    header nav ul li a {
+      text-decoration: none;
+      color: #01020b;
+    }
+
+    /* Style for dropdown */
+    header nav ul li .dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(185, 153, 211);
+      padding: 0;
+      margin: 0;
+      border-radius: 5px;
+      min-width: 160px;
+      box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    /* Show the dropdown when the parent li is hovered */
+    header nav ul li:hover .dropdown {
+      display: block;
+    }
+
+    /* Styling for dropdown items */
+    header nav ul li .dropdown li {
+      padding: 8px 15px;
+      margin: 0;
+    }
+
+    header nav ul li .dropdown li a {
+      color: #01020b;
+      text-decoration: none;
+      display: block;
+      transition: color 0.3s ease, padding-left 0.3s ease;
+    }
+
+    header nav ul li .dropdown li a:hover {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    /* Optional: Add smooth transition to dropdown */
+    header nav ul li .dropdown {
+      transition: opacity 0.3s ease-in-out;
+      opacity: 0;
+    }
+
+    header nav ul li:hover .dropdown {
+      opacity: 1;
+    }
+
+    
+    /* Additional styling for the search icon */
+
+    /* Media query for smaller screens */
+    @media (max-width: 767px) {
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+      }
+
+      header nav {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      header nav ul {
+        flex-direction: column;
+      }
+
+      header nav ul li {
+        margin: 10px 0;
+        margin-left: 0;
+      }
+
+      header .header-right {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <!-- <div class="logo">Logo</div> -->
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li>
+            <a href="#">ABOUT AL TIJARIA</a>
+            <ul class="dropdown">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="chairman.html">Chairman's Message</a></li>
+              <li><a href="events.html">Our Events</a></li>
+              <li><a href="awards.html">Awards</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">OUR PRESENCE</a>
+            <ul class="dropdown">
+              <li><a href="#">Kuwait</a></li>
+              <li><a href="#">Bahrain</a></li>
+              <li><a href="#">International</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="#">INVESTORS RELATIONS</a>
+            <ul class="dropdown">
+              <li><a href="#">Why Al Tijaria?</a></li>
+              <li><a href="#">Our Investments</a></li>
+              <li><a href="#">Financial Statements</a></li>
+              <li><a href="#">Annual Report</a></li>
+              <li><a href="#">Shareholders Affairs</a></li>
+            </ul>
+          </li>
+        
+          <li>
+            <a href="#">CORPORATE GOVERNANCE</a>
+            <ul class="dropdown">
+              <li><a href="#">BOD Committees</a></li>
+              <li><a href="#">Shareholders Rights</a></li>
+              <li><a href="#">Stakeholders</a></li>
+              <li><a href="#">Code Of Conduct</a></li>
+            </ul>
+          </li>
+          <li><a href="#">OUR PROPERTIES</a></li>
+          <!-- <li><a href="#">INVESTORS RELATIONS</a></li> -->
+          <!-- <li><a href="#">CORPORATE GOVERNANCE</a></li> -->
+          <li><a href="#">WE CARE</a></li>
+          <li><a href="#">CAREERS</a></li>
+        </ul>
+      </nav>
+      <div class="header-right">
+        <div class="search-icon">
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
