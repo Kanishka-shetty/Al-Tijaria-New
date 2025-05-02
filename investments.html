@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awards and Certifications</title>
+</head>
+<body style="background-color: #333; color: white;">
+    <!-- Placeholder for Header -->
+    <div id="header"></div>
+
+    <!-- Page-specific content -->
+    <div class="altijaria-image">
+        <img src="assets/investmentbanner.jpg" alt="whyaltijaria" style="width:100%; height:auto;">
+    </div>
+
+    <div class="container my-3 text-center">
+        <a href="space.html" style="color: #a1c3e7; text-decoration: none; font-weight: bold;">Home</a> /
+        <span style="color: white">Investor Relations</span> /
+        <span style="color: white">Our Investments</span>
+      </div>
+    <h1 style="text-align: center; color: rgb(111, 111, 237);">Our Investments</h1>
+    <p>Learn more about our company...</p>
+
+    <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin: 40px;">
+
+        <!-- Associates Card -->
+        <!-- <div style="background-color: black; color: white; width: 90%; max-width: 800px; border-radius: 12px; overflow: hidden;">
+            <h2 style="margin: 0; padding: 15px; background-color: #1e40af; text-align: center;">Associates</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 15px;">
+                <img src="assets/associates1.jpg" alt="Associates 1" style="width: 150px; height: auto;">
+                <img src="assets/associates2.jpg" alt="Associates 2" style="width: 150px; height: auto;">
+                <img src="assets/associates3.jpg" alt="Associates 3" style="width: 150px; height: auto;">
+                <img src="assets/associates4.jpg" alt="Associates 4" style="width: 150px; height: auto;">
+                <img src="assets/associates5.jpg" alt="Associates 5" style="width: 150px; height: auto;">
+            </div>
+        </div> -->
+    
+        <!-- Associates Card -->
+<!-- Associates Card -->
+<div style="background-color: black; color: white; width: 90%; max-width: 800px; border-radius: 12px; overflow: hidden; margin-bottom: 30px;">
+    <h2 style="margin: 0; padding: 15px; background-color: #1e40af; text-align: center;">Associates</h2>
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; padding: 20px;">
+
+        <!-- Row 1: Two images -->
+        <div style="display: flex; justify-content: center; gap: 15px; width: 100%;">
+            <!-- Associates Image 1, wrapped in anchor for navigation -->
+            <a href="associates/investment1.html">
+                <img src="assets/associates1.jpg" alt="Associates 1" style="width: 220px; height: auto;">
+            </a>
+            <img src="assets/associates2.jpg" alt="Associates 2" style="width: 220px; height: auto;">
+        </div>
+
+        <!-- Row 2: Two images -->
+        <div style="display: flex; justify-content: center; gap: 15px; width: 80%; margin-top: 15px;">
+            <img src="assets/associates3.jpg" alt="Associates 3" style="width: 180px; height: auto;">
+            <img src="assets/associates4.jpg" alt="Associates 4" style="width: 180px; height: auto;">
+        </div>
+
+        <!-- Row 3: One image centered -->
+        <div style="display: flex; justify-content: center; margin-top: 15px; width: 70%;">
+            <img src="assets/associates5.jpg" alt="Associates 5" style="width: 180px; height: auto;">
+        </div>
+    </div>
+</div>
+
+
+        <!-- Subsidiaries Card -->
+        <div style="background-color: black; color: white; width: 90%; max-width: 800px; border-radius: 12px; overflow: hidden;margin-bottom: 30px;">
+            <h2 style="margin: 0; padding: 15px; background-color: #1e40af; text-align: center;">Subsidiaries</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; padding: 20px; gap: 15px;">
+                <img src="assets/subsidiaries.jpg" alt="Subsidiary 1" style="width: 180px; height: auto;">
+                <img src="assets/subsidiaries2.jpg" alt="Subsidiary 2" style="width: 180px; height: auto;">
+            </div>
+        </div>
+    
+    </div>
+    
+    
+    <!-- Placeholder for Footer -->
+    <div id="footer"></div>
+
+    <script>
+        // Fetch and insert the header content from header.html
+        fetch("header.html")
+            .then(response => response.text())  // Convert response to text
+            .then(data => {
+                document.getElementById("header").innerHTML = data;  // Insert it into the header div
+            });
+
+        // Fetch and insert the footer content from footer.html
+        fetch("footer.html")
+            .then(response => response.text())  // Convert response to text
+            .then(data => {
+                document.getElementById("footer").innerHTML = data;  // Insert it into the footer div
+            });
+    </script>
+</body>
+</html>
